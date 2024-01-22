@@ -165,5 +165,11 @@ public class UserGUI extends JFrame {
 		btnSave.setBackground(SystemColor.textHighlight);
 		btnSave.setBounds(561, 369, 89, 23);
 		contentPane.add(btnSave);
+		
+		JLabel lblNewLabel_2 = new JLabel("Forgot password?");
+		lblNewLabel_2.setForeground(SystemColor.textHighlight);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_2.setBounds(43, 373, 120, 19);
+		contentPane.add(lblNewLabel_2);
 	}
 }
