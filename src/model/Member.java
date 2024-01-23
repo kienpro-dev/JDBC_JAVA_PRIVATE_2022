@@ -16,7 +16,22 @@ public class Member {
 
     private String username;
 
-    public String getMemberId() {
+    public Member() {
+		super();
+	}
+
+	public Member(String memberId, String memberName, int memberAge, Date memberDayStart, Date memberDayEnd,
+			String username) {
+		super();
+		this.memberId = memberId;
+		this.memberName = memberName;
+		this.memberAge = memberAge;
+		this.memberDayStart = memberDayStart;
+		this.memberDayEnd = memberDayEnd;
+		this.username = username;
+	}
+
+	public String getMemberId() {
         return memberId;
     }
 

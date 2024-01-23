@@ -8,7 +8,18 @@ public class RepairCenter {
 
     private int rcPrice;
 
-    public String getRcId() {
+    public RepairCenter() {
+		super();
+	}
+
+	public RepairCenter(String rcId, String rcName, int rcPrice) {
+		super();
+		this.rcId = rcId;
+		this.rcName = rcName;
+		this.rcPrice = rcPrice;
+	}
+
+	public String getRcId() {
         return rcId;
     }
 

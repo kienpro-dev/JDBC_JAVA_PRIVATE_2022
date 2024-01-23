@@ -156,7 +156,8 @@ public class MemberPTDAO {
     public List<MemberPT> statisticNumberMemberOfPT() throws SQLException {
         List<MemberPT> list = new ArrayList<>();
 
-        String sql = "SELECT PersonalTrainer.Name, COUNT(MemberID) AS NumberOfMember FROM MemberPT INNER JOIN PersonalTrainer ON MemberPT.PTID = PersonalTrainer.ID GROUP BY PersonalTrainer.Name";
+        String sql = "SELECT PersonalTrainer.Name, COUNT(memid) AS NumberOfMember FROM MemberPT "
+        		+ "INNER JOIN PersonalTrainer ON MemberPT.PTID = PersonalTrainer.ID GROUP BY PersonalTrainer.Name";
 
         PreparedStatement ps = JDBCConnection.getConnection().prepareStatement(sql);
         ResultSet rs = ps.executeQuery();

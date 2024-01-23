@@ -103,6 +103,26 @@ public class MemberDAO {
 
         return null;
     }
+    
+    public Member findByUsername(String username) throws SQLException {
+        String sql = "SELECT * FROM Member WHERE Username = ?";
+
+        PreparedStatement ps = JDBCConnection.getConnection().prepareStatement(sql);
+        ps.setString(1, username);
+        ResultSet rs = ps.executeQuery();
+        Member mem = new Member();
+        while (rs.next()) {
+            mem.setMemberId(rs.getString("ID"));
+            mem.setMemberName(rs.getString("Name"));
+            mem.setMemberAge(rs.getInt("Age"));
+            mem.setMemberDayStart(rs.getDate("DayStart"));
+            mem.setMemberDayEnd(rs.getDate("DayEnd"));
+            mem.setUsername(rs.getString("Username"));
+            return mem;
+        }
+
+        return null;
+    }
 
     public static String getMemberName(String username) throws SQLException {
         String sql = "SELECT Name FROM Member WHERE Username = ?";

@@ -16,7 +16,18 @@ public class MemberPT {
         return mem;
     }
 
-    public void setMem(Member mem) {
+    public MemberPT() {
+		super();
+	}
+
+	public MemberPT(Member mem, PersonalTrainer pt, int timeLeft) {
+		super();
+		this.mem = mem;
+		this.pt = pt;
+		this.timeLeft = timeLeft;
+	}
+
+	public void setMem(Member mem) {
         this.mem = mem;
     }
 

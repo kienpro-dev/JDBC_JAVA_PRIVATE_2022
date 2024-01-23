@@ -8,7 +8,18 @@ public class Account {
 
     private String role;
 
-    public String getUsername() {
+    public Account() {
+		super();
+	}
+
+	public Account(String username, String password, String role) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.role = role;
+	}
+
+	public String getUsername() {
         return username;
     }
 

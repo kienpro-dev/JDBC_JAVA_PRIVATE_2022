@@ -14,6 +14,18 @@ public class PersonalTrainer {
 		return ptId;
 	}
 
+	public PersonalTrainer() {
+		super();
+	}
+
+	public PersonalTrainer(String ptId, String ptName, String ptGender, int ptHirePricePerDay) {
+		super();
+		this.ptId = ptId;
+		this.ptName = ptName;
+		this.ptGender = ptGender;
+		this.ptHirePricePerDay = ptHirePricePerDay;
+	}
+
 	public void setPtId(String ptId) {
 		this.ptId = ptId;
 	}

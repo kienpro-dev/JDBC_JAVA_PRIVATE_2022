@@ -12,7 +12,18 @@ public class Equipment {
         return equipmentId;
     }
 
-    public void setEquipmentId(String equipmentId) {
+    public Equipment(String equipmentId, String equipmentName, int equipmentDurability) {
+		super();
+		this.equipmentId = equipmentId;
+		this.equipmentName = equipmentName;
+		this.equipmentDurability = equipmentDurability;
+	}
+
+	public Equipment() {
+		super();
+	}
+
+	public void setEquipmentId(String equipmentId) {
         this.equipmentId = equipmentId;
     }
 

@@ -12,7 +12,18 @@ public class RepairEquipment {
         return e;
     }
 
-    public void setE(Equipment e) {
+    public RepairEquipment() {
+		super();
+	}
+
+	public RepairEquipment(Equipment e, RepairCenter rc, int timeLeft) {
+		super();
+		this.e = e;
+		this.rc = rc;
+		this.timeLeft = timeLeft;
+	}
+
+	public void setE(Equipment e) {
         this.e = e;
     }
 
